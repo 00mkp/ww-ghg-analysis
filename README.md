@@ -34,6 +34,35 @@ Supplemented with **World Bank Open Data** (1960–2024), joined by ISO3 code + 
 | `wb_land_area.csv` | 1960–2024 | World Bank — Land area (km²) |
 | `wb_population.csv` | 1960–2024 | World Bank — Population |
 
+## Setup
+
+Python **3.12** is pinned via [`.python-version`](.python-version). Pick one of the two options below — they produce an identical `.venv/` and you can mix-and-match across teammates.
+
+### Option A — `venv` + `pip` (stdlib, no extra install)
+
+Requires Python 3.12 already installed (e.g. `brew install python@3.12`, or [python.org](https://www.python.org/downloads/)).
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate       # Windows: .venv\Scripts\activate
+python --version                # verify: Python 3.12.x
+pip install -r requirements.txt
+pre-commit install
+```
+
+### Option B — `uv` (faster, auto-installs Python)
+
+Install `uv` once: `brew install uv`, or `curl -LsSf https://astral.sh/uv/install.sh | sh`.
+
+```bash
+uv venv                         # reads .python-version, auto-downloads 3.12 if needed
+source .venv/bin/activate       # Windows: .venv\Scripts\activate
+uv pip install -r requirements.txt
+pre-commit install
+```
+
+`pre-commit install` wires the git hooks into your local clone (one-time per clone).
+
 ## Workflow
 
 1. **Build the merged dataset** — join the supplemental World Bank files onto the GHG dataset using ISO3 code + year.
