@@ -17,7 +17,7 @@ The motivation: give developing countries a view of their projected emissions tr
 
 ## Data
 
-Data lives in `data/`. The core dataset is the Kaggle **Global Greenhouse Gas Emissions by Country, 1950–2024** (originally Our World in Data / Climate Watch): 14,925 rows × 5 columns covering 199 countries — `country`, `year`, `iso_code`, `total_ghg` (Mt CO₂-eq), `ghg_per_capita` (t CO₂-eq).
+Data lives in `data/`. The core dataset is the Kaggle **Global Greenhouse Gas Emissions by Country, 1950–2024** (originally Our World in Data / Climate Watch): 14,924 rows × 5 columns covering 199 countries — `country`, `year`, `iso_code`, `total_ghg` (Mt CO₂-eq), `ghg_per_capita` (t CO₂-eq). See [`data/README.md`](data/README.md) for per-file schemas.
 
 Supplemented with **World Bank Open Data** (1960–2024), joined by ISO3 code + year:
 
@@ -75,11 +75,19 @@ pre-commit install
 
 ```
 .
-├── data/                        # raw CSVs (GHG + World Bank supplements)
+├── .github/
+│   ├── workflows/ci.yml         # runs pre-commit on every PR
+│   └── pull_request_template.md
+├── data/
+│   ├── README.md                # per-dataset schemas
+│   └── *.csv                    # raw CSVs (GHG + World Bank supplements)
 ├── docs/                        # handout and proposal PDFs
-│   ├── CPSC393_ML_Final_Project.pdf
-│   └── Project Proposal.pdf
 ├── src/                         # project source code
+├── .gitignore
+├── .pre-commit-config.yaml      # ruff + nbstripout hooks
+├── .python-version              # pinned to 3.12
+├── requirements.txt             # Python dependencies
+├── LICENSE
 ├── README.md
 └── REQUIREMENTS.md              # markdown version of the handout
 ```
