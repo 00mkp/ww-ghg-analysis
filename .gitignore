@@ -40,7 +40,6 @@ dist/
 venv/
 env/
 ENV/
-.python-version
 
 # ---- Jupyter ----
 .ipynb_checkpoints/
