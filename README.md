@@ -4,6 +4,8 @@
 | --- | --- | --- |
 | Maksim Popov | Daniel Franks | Andrew Blanco |
 
+> **NOTE:** Developed as a git repo; submitted as a zip so pre-generated reports under `reports/` are included (those are gitignored in the live repo).
+
 ## Description
 
 Final project for **CPSC 393 - Machine Learning** at Chapman University (Spring 2026, Dr. Rajeev Joshi).
