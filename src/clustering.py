@@ -330,7 +330,7 @@ def variant_section(snap, result, heading):
         countries = result[countries_key]
 
         lines += [f"### {algo} (k = {k})", "", "**Cluster summaries**", ""]
-        cols = ["cluster", "count"] + NUMERIC_FEATURES
+        cols = ["cluster", "count"] + [f"mean {f}" for f in NUMERIC_FEATURES]
         lines.append("| " + " | ".join(cols) + " |")
         lines.append("| " + " | ".join(["---"] * len(cols)) + " |")
         for _, row in summary.iterrows():

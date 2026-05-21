@@ -109,8 +109,8 @@ Accuracy alone would be misleading given the class imbalance; F1 + per class bre
 
 ```
 reports/classification/
-+-- report.md
-\-- images/          # PNGs across the sections above
+├── report.md
+└── images/          # PNGs across the sections above
 ```
 
 Gitignored, same convention as `reports/regression/`.

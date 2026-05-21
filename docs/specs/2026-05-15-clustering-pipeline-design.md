@@ -80,8 +80,8 @@ Filenames include the variant suffix (e.g. `elbow_kmeans_raw.png`, `elbow_kmeans
 
 ```
 reports/clustering/
-+-- report.md
-\-- images/          # elbow, silhouette, PCA scatters
+├── report.md
+└── images/          # elbow, silhouette, PCA scatters
 ```
 
 Gitignored, same convention as the other pipelines.

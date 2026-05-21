@@ -99,8 +99,8 @@ Reported for every (model, target) combination on the test set:
 
 ```
 reports/regression/
-+-- report.md
-\-- images/          # ~30 PNGs for the sections above
+├── report.md
+└── images/          # ~30 PNGs for the sections above
 ```
 
 Gitignored, same convention as `reports/eda/`.

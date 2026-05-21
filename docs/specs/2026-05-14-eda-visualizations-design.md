@@ -74,8 +74,8 @@ Bar chart of `NaN` count per column. Helps to choose a `NaN` handling strategy (
 
 ```
 reports/eda/
-+-- report.md            # generated markdown report with embedded images + statistics tables
-\-- images/              # one PNG per chart, named by section + feature
+├── report.md            # generated markdown report with embedded images + statistics tables
+└── images/              # one PNG per chart, named by section + feature
 ```
 
 The markdown report sections follow the visualization sections mentioned/shown above and insert images via relative paths.
