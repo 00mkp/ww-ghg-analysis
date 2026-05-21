@@ -4,7 +4,7 @@
 | --- | --- | --- |
 | Maksim Popov | Daniel Franks | Andrew Blanco |
 
-> **NOTE:** Developed as a git repo; submitted as a zip so pre-generated reports under `reports/` are included (those are gitignored in the live repo).
+### **NOTE:** Developed as a git repo; submitted as a zip so pre-generated reports under `reports/` are included (are gitignored in the live git repo).
 
 ## Description
 
