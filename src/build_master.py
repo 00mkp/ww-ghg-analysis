@@ -2,6 +2,10 @@ from pathlib import Path
 
 import pandas as pd
 
+import warnings
+
+warnings.filterwarnings("ignore")
+
 REPO_ROOT = Path(__file__).resolve().parents[1]  # resolves to the root of the repo
 DATA_DIR = REPO_ROOT / "data"  # resolves to dir where data lives
 OUTPUT_DIR = DATA_DIR / "processed"  # where processed stuff goes (master dataset)

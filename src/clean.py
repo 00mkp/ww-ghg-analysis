@@ -2,6 +2,10 @@ from pathlib import Path
 
 import pandas as pd
 
+import warnings
+
+warnings.filterwarnings("ignore")
+
 # set up paths
 REPO_ROOT = Path(__file__).resolve().parents[1]
 INPUT_PATH = REPO_ROOT / "data" / "processed" / "master.csv"

@@ -27,6 +27,10 @@ from sklearn.model_selection import (
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.preprocessing import StandardScaler
 
+import warnings
+
+warnings.filterwarnings("ignore")
+
 # set up paths and shared output config
 REPO_ROOT = Path(__file__).resolve().parents[1]
 INPUT_PATH = REPO_ROOT / "data" / "processed" / "master_clean.csv"

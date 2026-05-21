@@ -18,6 +18,10 @@ from plotnine import (  # import everything for desired EDA
     theme_minimal,
 )
 
+import warnings
+
+warnings.filterwarnings("ignore")
+
 # set up all paths
 REPO_ROOT = Path(__file__).resolve().parents[1]
 INPUT_PATH = REPO_ROOT / "data" / "processed" / "master.csv"

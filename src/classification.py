@@ -30,6 +30,10 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
 
+import warnings
+
+warnings.filterwarnings("ignore")
+
 # set up paths and shared output config
 REPO_ROOT = Path(__file__).resolve().parents[1]
 INPUT_PATH = REPO_ROOT / "data" / "processed" / "master_clean.csv"

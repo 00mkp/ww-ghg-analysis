@@ -6,6 +6,10 @@ import regression
 import classification
 import clustering
 
+import warnings
+
+warnings.filterwarnings("ignore")
+
 
 # pipelines in order, each output feeds the next
 PIPELINES = [
