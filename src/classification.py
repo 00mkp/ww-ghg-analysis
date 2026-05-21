@@ -39,7 +39,7 @@ REPORT_PATH = REPORTS_DIR / "report.md"
 
 SEED = 42  # same seed used across pipelines
 
-# hyperparameter grids for the three tuned models (Logistic Regression baseline, no tuning)
+# hyperparameter grids for three tuned models (Logistic Regression baseline, no tuning)
 KNN_GRID = {
     "n_neighbors": [3, 5, 7, 10, 15],
     "p": [1, 2],

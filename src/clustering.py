@@ -86,7 +86,7 @@ def log_transform_features(features):
     return out
 
 
-# Fits K-Means and returns cluster labels (n_init=10 reruns from different random starts, keeps best)
+# Fits K-Means and returns cluster labels (n_init=10 reruns from different random starts, keeps best, makes sure it doesnt get stuck at any point)
 def fit_kmeans(X, k):
     return KMeans(n_clusters=k, random_state=SEED, n_init=10).fit_predict(X)
 
