@@ -18,8 +18,7 @@ PIPELINES = [
 ]
 
 
-# Runs each pipeline's main() in order, all in this same process
-# If any pipeline raises an exception it bubbles up and stops the run
+# Runs each pipeline's main() in order
 def main():
     for name, module in PIPELINES:
         print(f"\n{'=' * 60}\nRunning {name}\n{'=' * 60}")
