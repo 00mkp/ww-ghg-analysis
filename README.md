@@ -175,6 +175,13 @@ K-Means and HAC on a 2024 country level snapshot, run in two variants.
 - **Raw** features yield outlier dominated clusters (4 vs 175 - China, US, India, Russia isolated).
 - **Log transformed** features give more interpretable splits (57 vs 122 with K-Means), trading a higher silhouette score for a more useful partition.
 
+### Limitations
+
+- Per capita GHG is much harder to predict than total GHG (R^2 0.68 vs 0.99).
+- Classification caps around 0.58 because of class imbalance plus small feature set.
+- Clustering groups countries by economy size more than by region.
+- External features (energy mix, climate) would probably help but were out of scope.
+
 ## Key Deadlines
 
 | Deliverable | Due |
