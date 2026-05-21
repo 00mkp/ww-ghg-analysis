@@ -159,15 +159,15 @@ Headline metrics per pipeline; full breakdowns in `reports/<pipeline>/report.md`
 
 Predicting `total_ghg` and `ghg_per_capita` from features.
 
-- `total_ghg`: Random Forest reaches **R^2 = 0.99 / RMSE = 78** on the test set; linear models cap around R^2 = 0.87.
+- `total_ghg`: KNN is the strongest model at **R^2 = 0.99 / RMSE = 67** on the test set, with Random Forest a close second (R^2 = 0.99 / RMSE = 78); linear models cap around R^2 = 0.87.
 - `ghg_per_capita`: Random Forest reaches **R^2 = 0.68**; linear models near zero (R^2 = 0.10) - the per capita feature is genuinely harder, but we have a good predictor for total GHG and that is sufficient for our use.
 
 ### Classification
 
 Predicting `continent` (6 classes) from developmental + emissions features.
 
-- Best test accuracy: **~0.58 (SVM, engineered features)**. Feature engineering (log / squared / reciprocal) raised Logistic Regression, KNN, and SVM performance by 6-11 points but hurt Random Forest slightly.
-- The ~0.58 ceiling reflects a feature data limit: six developmental indicators don't cleanly separate six continents.
+- Best test macro F1: **0.48 (KNN, engineered features)**, used as primary metric due to class imbalance. SVM is second for F1 (0.44), leads on raw accuracy. Feature engineering (log / squared / reciprocal) raised Logistic Regression, KNN, and SVM performance by 6-11 points but hurt Random Forest slightly.
+- F1 ceiling of 0.48 shows feature data limit: six developmental indicators cant properly separate six continents.
 
 ### Clustering
 
